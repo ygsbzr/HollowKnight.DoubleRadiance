@@ -31,7 +31,7 @@ namespace DoubleRadiance
                     result = "无上姐妹";
                     break;
                 default:
-                    result = Language.Language.GetInternal(key, sheetTitle);
+                    result = orig;
                     break;
             }
             return result;

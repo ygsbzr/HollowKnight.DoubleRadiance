@@ -105,13 +105,20 @@ namespace DoubleRadiance
                     flag2 = true;
                 }
             }
-            if (Abs1CL.Fsm.ActiveState.Name == "Knight Break Antic" || Abs2CL.Fsm.ActiveState.Name == "Knight Break Antic")
+            if (Abs1CL.Fsm.ActiveState.Name == "Final Impact")
             {
                 if (!endFlag)
                 {
-                    Abs1CL.SetState("Knight Break Antic");
-                    Abs2CL.SetState("Knight Break Antic");
+                    Abs2CL.SetState("Final Impact");
                     endFlag=true;
+                }
+            }
+            if (Abs2CL.Fsm.ActiveState.Name == "Final Impact")
+            {
+                if (!endFlag)
+                {
+                    Abs1CL.SetState("Final Impact");
+                    endFlag = true;
                 }
             }
 
